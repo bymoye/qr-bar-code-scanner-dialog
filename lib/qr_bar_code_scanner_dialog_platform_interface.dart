@@ -1,7 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-
-import 'qr_bar_code_scanner_dialog_method_channel.dart';
+import 'package:qr_bar_code_scanner_dialog/qr_bar_code_scanner_dialog_web.dart';
 
 abstract class QrBarCodeScannerDialogPlatform extends PlatformInterface {
   /// Constructs a QrBarCodeScannerDialogPlatform.
@@ -9,8 +8,7 @@ abstract class QrBarCodeScannerDialogPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static QrBarCodeScannerDialogPlatform _instance =
-      MethodChannelQrBarCodeScannerDialog();
+  static QrBarCodeScannerDialogPlatform _instance = QrBarCodeScannerDialogWeb();
 
   /// The default instance of [QrBarCodeScannerDialogPlatform] to use.
   ///
